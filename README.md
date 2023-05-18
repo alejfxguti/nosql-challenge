@@ -1,37 +1,39 @@
 # NoSQL Challenge - Eat Safe, Love
 
-## Prep Steps
+## Steps Taken to Complete the Challenge
 
-- Create a new repository named "nosql-challenge" for this project.
-- Clone the repository to your local machine.
-- Add the Jupyter notebook starter files and the establishments.json file to the repository.
-- Push the changes to GitHub.
+### Preparation
 
-## Part 1: Database and Jupyter Notebook Set Up
+1. Created a new repository named "nosql-challenge" for the project.
+2. Cloned the repository to my local machine.
+3. Added the Jupyter notebook starter files and the establishments.json file to the repository.
+4. Pushed the changes to GitHub.
 
-1. Import the establishments.json data to MongoDB using the following command: `mongoimport --type json -d uk_food -c establishments --drop --jsonArray establishments.json`
-2. Import the required libraries in your Jupyter notebook: `PyMongo` and `pprint`.
-3. Create a Mongo Client instance.
-4. Confirm the database and collection are created properly:
-- Use `db.getMongo().getDBNames()` to list the databases and ensure `uk_food` is listed.
-- Use `db.getCollectionNames()` to list the collections and ensure `establishments` is present.
-- Use `db.establishments.findOne()` to find and display one document from the `establishments` collection.
-5. Assign the `establishments` collection to a variable for further use.
+### Part 1: Database and Jupyter Notebook Set Up
 
-## Part 2: Update the Database
+1. Imported the establishments.json data to MongoDB using the following command: `mongoimport --type json -d uk_food -c establishments --drop --jsonArray establishments.json`
+2. Imported the required libraries in the Jupyter notebook: `PyMongo` and `pprint`.
+3. Created a Mongo Client instance.
+4. Confirmed the creation of the database and collection:
+- Used `db.getMongo().getDBNames()` to list the databases and ensured `uk_food` is listed.
+- Used `db.getCollectionNames()` to list the collections and ensured `establishments` is present.
+- Used `db.establishments.findOne()` to find and display one document from the `establishments` collection.
+5. Assigned the `establishments` collection to a variable for further use.
 
-1. Add information about the new restaurant, "Penang Flavours," to the database.
-2. Find the `BusinessTypeID` for "Restaurant/Cafe/Canteen" and return only the `BusinessTypeID` and `BusinessType` fields.
-3. Update the new restaurant with the obtained `BusinessTypeID`.
-4. Remove all establishments within the Dover Local Authority and verify the deletion.
-5. Use `update_many` to convert latitude and longitude to decimal numbers.
-6. Use `update_many` to convert `RatingValue` to integer numbers.
-## Part 3: Exploratory Analysis
-Use the following questions to explore the database:
+### Part 2: Update the Database
 
-1. Which establishments have a hygiene score of 20?
-2. Which London establishments have a `RatingValue` greater than or equal to 4?
-3. What are the top 5 establishments with a `RatingValue` of 5, sorted by the lowest hygiene score, nearest to "Penang Flavours"?
-4. How many establishments in each Local Authority area have a hygiene score of 0? Display the top ten Local Authority areas.
+1. Added information about the new restaurant, "Penang Flavours," to the database.
+2. Found the `BusinessTypeID` for "Restaurant/Cafe/Canteen" and returned only the `BusinessTypeID` and `BusinessType` fields.
+3. Updated the new restaurant with the obtained `BusinessTypeID`.
+4. Removed all establishments within the Dover Local Authority and verified the deletion.
+5. Used `update_many` to convert latitude and longitude to decimal numbers.
+6. Used `update_many` to convert `RatingValue` to integer numbers.
 
-That's it! You have completed the NoSQL challenge for the UK Food Standards Agency's establishments ratings data.
+### Part 3: Exploratory Analysis
+
+Explored the database by answering the following questions:
+
+1. Identified establishments with a hygiene score of 20.
+2. Identified London establishments with a `RatingValue` greater than or equal to 4.
+3. Determined the top 5 establishments with a `RatingValue` of 5, sorted by the lowest hygiene score and nearest to "Penang Flavours."
+4. Calculated the number of establishments in each Local Authority area with a hygiene score of 0 and displayed the top ten Local Authority areas.
