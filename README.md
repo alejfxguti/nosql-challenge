@@ -1,17 +1,11 @@
 # NoSQL Challenge - Eat Safe, Love
 
-## Before You Begin
+## Prep Steps
 
 - Create a new repository named "nosql-challenge" for this project.
 - Clone the repository to your local machine.
 - Add the Jupyter notebook starter files and the establishments.json file to the repository.
 - Push the changes to GitHub.
-
-## Files
-
-Download the following files:
-
-- [Module 12 Challenge files](#) 
 
 ## Part 1: Database and Jupyter Notebook Set Up
 
